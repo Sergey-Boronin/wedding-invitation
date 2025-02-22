@@ -1,6 +1,8 @@
+console.log('first')
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxYBXRlg2CQBOJ9aMV2LwxzntCB2pJuOSdqai93eVo5GRgYgOhKkmNbVpnBcoYct0-d/exec';
 
-const form = document.getElementById('weddingForm');
+const form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
   e.preventDefault(); 
