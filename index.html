@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="root">
+    <section class="section section_full-w hero">
+      <img class="hero__image" src="./images/title-image.webp" alt="">
+      <div class="hero__text-block">
+        <h1 class="heading heading_title">Никита и Анастасия</h1>
+        <p class="text text__title">29 августа 2025</p>
+      </div>
+    </section>
+    <section class="section guests">
+      <h2 class="heading">Дорогие гости!</h2>
+      <p class="text">В нашей жизни скоро состоится важное событие - наша свадьба!
+        Мы с удовольствием хотим разделить этот день с вами!</p>
+    </section>
+    <section class="section timing">
+      <h2 class="heading">Программа дня</h2>
+      <ul class="timing-list">
+        <li class="timing-list__item">15:30 - сбор гостей</li>
+        <li class="timing-list__item">16:30 - торжественная церемония</li>
+        <li class="timing-list__item">17:00 - банкет</li>
+        <li class="timing-list__item">23:00 - завершение вечера</li>
+      </ul>
+    </section>
+    <section class="section dress">
+      <h2 class="heading">Дресс-код</h2>
+      <p class="text">
+        Для нас главное - наше присутствие! Но мы будем рады, если в своих нарядах вы поддержите цветовую гамму нашей
+        свадьбы
+      </p>
+      <div class="dress-colors">
+        <ul class="dress-colors__list">
+          <li class="dress-colors__item color1"></li>
+          <li class="dress-colors__item color2"></li>
+          <li class="dress-colors__item color3"></li>
+          <li class="dress-colors__item color4"></li>
+        </ul>
+        <ul class="dress-colors__list">
+          <li class="dress-colors__item color5"></li>
+          <li class="dress-colors__item color6"></li>
+          <li class="dress-colors__item color7"></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section_full-w address">
+      <h2 class="heading">Как добраться</h2>
+      <img class="address__img" src="./images/place.webp" alt="#">
+      <div class="section">
+        <p class="text">
+          Для вашего удобства мы подготовили <a class="address__link" target="_blank"
+            href="https://yandex.ru/maps/?ll=37.544868%2C54.069228&mode=poi&poi%5Bpoint%5D=37.542904%2C54.069020&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1102259731&z=17.7">карту</a>.
+          Надеемся вы легко найдете место проведения свадьбы и порадуете нас
+          своим присутствием
+        </p>
+        <address>
+          Поляна ивент вторая площадка
+          Тульская область Щекинский район д. Яснополянские выселки
+        </address>
+      </div>
+    </section>
+    <section class="section wishes">
+      <h2 class="heading">Пожелания</h2>
+      <ul class="wishes__list">
+        <li>
+          <p class="text">
+            Будем благодарны, если вы воздержитесь от криков « горько» на празднике, ведь поцелуй - выражение чувств,
+            он не
+            может быть по заказу
+          </p>
+        </li>
+        <li>
+          <p class="text">
+            По желанию, вы можете вместо цветов принести с собой бутылочку вашего любимого алкоголя с этикеткой, где
+            будут
+            написаны ваши пожелания, день или особое событие, когда его открыть
+          </p>
+        </li>
+        <li>
+          <p class="text">
+            Наша свадьба пройдет на свежем воздухе, под открытым небом! Вечером может быть прохладно, поэтому не
+            забудьте
+            взять с собой что-нибудь уютное, чтобы накинуть на плечи.
+          </p>
+        </li>
+        <li>
+          <p class="text">
+            Для вашего комфорта мы позаботимся о средствах от комаров, но если у вас есть особые предпочтения, не
+            стесняйтесь взять с собой любимый спрей.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section section_form">
+      <h2 class="heading">Анкета</h2>
+      <p class="text spacing_16">Пожалуйста, подтвердите свое присутствие до</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-container">
+          <p class="text">Ваши имя и фамилия</p>
+          <p class="text spacing_16">(если будете с парой, укажите все имена)</p>
+          <input class="input" type="text" id="name" name="name" required />
+          <p class="text">Вы будете присутствовать на мероприятии? </p>
+        </div>
+        <div class="checkbox-group">
+          <div class="label-box">
+            <input type="checkbox" id="yesCheck" value="yes" />
+            <label class="text" for="yesCheck">Приду</label>
+          </div>
+          <div class="label-box">
+            <input type="checkbox" id="noCheck" value="no" />
+            <label class="text" for="noCheck">Не получится</label>
+          </div>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
