@@ -113,20 +113,22 @@
           <p class="text">Ваши имя и фамилия</p>
           <p class="text spacing_16">(если будете с парой, укажите все имена)</p>
           <input class="input" type="text" id="name" name="name" required />
-          <p class="text">Вы будете присутствовать на мероприятии? </p>
+          <p class="text">Вы будете присутствовать на мероприятии?</p>
         </div>
-        <div class="checkbox-group">
+        <div class="radio-group">
           <div class="label-box">
-            <input type="checkbox" id="yesCheck" value="yes" />
+            <input type="radio" name="answer" id="yesCheck" value="yes" />
             <label class="text" for="yesCheck">Приду</label>
           </div>
           <div class="label-box">
-            <input type="checkbox" id="noCheck" value="no" />
+            <input type="radio" name="answer" id="noCheck" value="no" />
             <label class="text" for="noCheck">Не получится</label>
           </div>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" id="submitBtn">Отправить</button>
       </form>
+      <!-- Элемент для отображения сообщения -->
+      <div id="responseMessage" class="response-message"></div>
     </section>
   </div>
 

@@ -1,33 +1,30 @@
-console.log('first')
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxYBXRlg2CQBOJ9aMV2LwxzntCB2pJuOSdqai93eVo5GRgYgOhKkmNbVpnBcoYct0-d/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzgkAKEdNsHkyWEMnfqIZCV7rJy5g4e0-HNnSKxZjl35tntH8LW0fQKosc5ILNkJA2A/exec';
 
 const form = document.getElementById('form');
+const submitBtn = document.getElementById('submitBtn');
+const responseMessage = document.getElementById('responseMessage');
 
 form.addEventListener('submit', e => {
-  e.preventDefault(); 
+  e.preventDefault();
 
-  const nameValue = document.getElementById('name').value.trim();
-  const yesChecked = document.getElementById('yesCheck').checked;
-  const noChecked = document.getElementById('noCheck').checked;
-
-  let attendance = '';
-  if (yesChecked && !noChecked) {
-    attendance = 'yes';
-  } else if (!yesChecked && noChecked) {
-    attendance = 'no';
-  } else if (yesChecked && noChecked) {
-    attendance = 'yes and no';
-  } else {
-    attendance = 'undecided';
+  // Проверяем, выбран ли вариант ответа
+  const selectedOption = document.querySelector('input[name="answer"]:checked');
+  if (!selectedOption) {
+    responseMessage.textContent = 'Пожалуйста, выберите вариант ответа.';
+    return;
   }
 
+  // Блокируем кнопку и показываем лоадер
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<span class="spinner"></span> Отправка...';
+
+  const nameValue = document.getElementById('name').value.trim();
+  const answer = selectedOption.value;
 
   const data = {
     name: nameValue,
-    answer: attendance
+    answer: answer
   };
-
 
   fetch(scriptURL, {
     method: 'POST',
@@ -36,11 +33,15 @@ form.addEventListener('submit', e => {
     .then(response => response.json())
     .then((res) => {
       console.log('Успех!', res);
-      alert('Спасибо! Ваш ответ отправлен.');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Отправить';
+      responseMessage.textContent = 'Спасибо! Ваш ответ отправлен.';
       form.reset();
     })
     .catch(error => {
       console.error('Ошибка!', error);
-      alert('Произошла ошибка. Попробуйте ещё раз.');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Отправить';
+      responseMessage.textContent = 'Произошла ошибка. Попробуйте ещё раз.';
     });
 });

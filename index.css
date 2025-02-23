@@ -264,3 +264,34 @@ button {
 button:hover {
   background: #333;
 }
+
+/* Спиннер для кнопки */
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Пример стилей для сообщения */
+.response-message {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #292524;
+}
