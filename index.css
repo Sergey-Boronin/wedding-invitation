@@ -374,4 +374,5 @@ button[disabled]:hover {
   text-align: center;
   font-size: 16px;
   color: #292524;
+  font-weight: 500;
 }
