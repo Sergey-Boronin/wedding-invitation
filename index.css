@@ -76,10 +76,17 @@ li {
   margin-top: 138px;
   margin-bottom: 16px;
   width: fit-content;
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 300;
   line-height: 80%;
   color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .heading_title {
+    font-size: 64px;
+  }
+
 }
 
 .text__title {
@@ -124,11 +131,19 @@ li {
   /* aspect-ratio: 1/2; */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .hero {
     height: 100vh;
   }
+
+  .hero__image {
+    height: 100vh;
+    /* aspect-ratio: 390 / 844; */
+    aspect-ratio: 6 / 13;
+
+  }
 }
+
 
 .timing-list {
   display: flex;
@@ -198,8 +213,6 @@ li {
   .dress-colors__item {
     width: 76px;
     height: 76px;
-    background-color: #292524;
-    border-radius: 50%;
   }
 
   .dress-colors__list {
