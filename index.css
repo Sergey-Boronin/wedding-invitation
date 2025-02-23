@@ -121,7 +121,7 @@ li {
   /* height: 100%; */
   object-fit: cover;
   z-index: 1;
-  aspect-ratio: 1/2;
+  /* aspect-ratio: 1/2; */
 }
 
 @media screen and (max-width: 425px) {
