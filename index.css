@@ -3,8 +3,10 @@
 }
 
 body {
-  font-family: 'Roboto';
-  background-color: #ccc;
+  font-family: "Source Serif 4", serif;
+  font-weight: 300;
+  /* background-color: #ccc; */
+  background: linear-gradient(to bottom, #e4ecf1, #f3e7e9);
 }
 
 body,
@@ -36,7 +38,7 @@ li {
   /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
   /* border: 1px solid black; */
   background-color: #fff;
@@ -51,32 +53,40 @@ li {
 }
 
 .heading {
-  margin-bottom: 32px;
-  font-family: 'Playfair';
-  font-size: 48px;
+  margin-bottom: 24px;
+  font-size: 52px;
+  font-weight: 400;
   line-height: 120%;
   text-align: center;
   color: #292524;
 }
 
 .text {
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
   text-align: center;
   color: #292524;
+  font-size: 18px;
 }
 
 .heading_title {
-  /* margin: ; */
+  margin-top: 138px;
+  margin-bottom: 16px;
   width: fit-content;
-  font-size: 72px;
-  font-weight: 400;
+  font-size: 78px;
+  font-weight: 300;
   line-height: 80%;
   color: #fff;
 }
 
 .text__title {
   font-size: 24px;
-  color: #fff
+  color: #fff;
+  font-weight: 400;
+}
+
+.text_form {
+  text-align: left;
+  margin-bottom: 18px;
 }
 
 
@@ -114,6 +124,10 @@ li {
   text-align: center;
 }
 
+.timing-list__item {
+  font-size: 24px;
+}
+
 /*------------------colors--------------------*/
 
 .dress-colors {
@@ -129,6 +143,8 @@ li {
   justify-content: center;
   gap: 12px;
 }
+
+
 
 .dress-colors__item {
   width: 82px;
@@ -165,13 +181,33 @@ li {
   background-color: #EFCDB8;
 }
 
+@media screen and (max-width: 425px) {
+  .dress-colors__item {
+    width: 76px;
+    height: 76px;
+    background-color: #292524;
+    border-radius: 50%;
+  }
+
+  .dress-colors__list {
+    gap: 6px;
+  }
+
+}
+
 .address__img {
   width: 100%;
   object-fit: cover;
 }
 
+.address__text {
+  font-size: 13px;
+  margin-bottom: 18px;
+  /* font-weight: 400; */
+}
+
 .address__link {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .wishes__list {
@@ -230,22 +266,40 @@ input[type="text"] {
 }
 
 /* Чекбоксы */
-.checkbox-group {
-  margin: 1rem 0;
+
+.radio-group {
+  margin-bottom: 24px;
 }
 
-.checkbox-group div {
-  margin-bottom: 0.5rem;
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #292524;
+  border-radius: 2px;
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.checkbox-group label {
-  display: inline;
-  font-weight: 400;
-  /* margin-left: 0.5rem; */
-}
-
-.checkbox-group input[type="checkbox"] {
-  margin-right: 0.5rem;
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  /* Отступ сверху */
+  left: 1px;
+  /* Отступ слева */
+  right: 1px;
+  /* Отступ справа */
+  bottom: 1px;
+  /* Отступ снизу */
+  background-color: #292524;
+  border-radius: 0;
 }
 
 /* Кнопка */
