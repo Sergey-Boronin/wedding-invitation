@@ -117,18 +117,21 @@
         </div>
         <div class="radio-group">
           <div class="label-box">
-            <input type="radio" name="answer" id="yesCheck" value="yes" />
+            <input type="radio" name="answer" id="yesCheck" value="Приду" />
             <label class="text" for="yesCheck">Приду</label>
           </div>
           <div class="label-box">
-            <input type="radio" name="answer" id="noCheck" value="no" />
+            <input type="radio" name="answer" id="noCheck" value="Не получится" />
             <label class="text" for="noCheck">Не получится</label>
           </div>
         </div>
-        <button type="submit" id="submitBtn">Отправить</button>
+        <div class="submit-wrapper">
+          <button type="submit" id="submitBtn">Отправить</button>
+          <div id="responseMessage" class="response-message"></div>
+        </div>
       </form>
       <!-- Элемент для отображения сообщения -->
-      <div id="responseMessage" class="response-message"></div>
+
     </section>
   </div>
 

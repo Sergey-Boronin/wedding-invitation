@@ -302,8 +302,16 @@ input[type="radio"]:checked::before {
   border-radius: 0;
 }
 
+.submit-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
 /* Кнопка */
 button {
+  width: 120px;
+  height: 42px;
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -317,6 +325,24 @@ button {
 
 button:hover {
   background: #333;
+}
+
+button:disabled,
+button[disabled] {
+  background: #888;
+  /* Цвет можно выбрать любой */
+  cursor: default;
+  /* Курсор по умолчанию, не pointer */
+  opacity: 0.6;
+  /* Немного затемнённый вид */
+  pointer-events: none;
+  /* Убирает hover-эффект */
+}
+
+/* Убираем hover-эффект для disabled */
+button:disabled:hover,
+button[disabled]:hover {
+  background: #888;
 }
 
 /* Спиннер для кнопки */
@@ -344,7 +370,7 @@ button:hover {
 
 /* Пример стилей для сообщения */
 .response-message {
-  margin-top: 16px;
+  /* margin-top: 16px; */
   text-align: center;
   font-size: 16px;
   color: #292524;
